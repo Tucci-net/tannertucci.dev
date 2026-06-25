@@ -1,5 +1,9 @@
 ---
 import BaseLayout from "../layouts/BaseLine.astro";
+import heroBanner from "../assets/FrontPageBG.png";
+import profileImage from "../assets/TTucci pfp.jpg";
+import projectImage from "../assets/Stardust ico.png";
+import aboutImage from "../assets/TTucciGradMain.jpg";
 
 const pageTitle = "Tanner Tucci";
 const siteName = "Tanner Tucci";
@@ -11,7 +15,7 @@ const siteName = "Tanner Tucci";
     <header class="hero-header" data-astro-cid-anhloy43="">
         <picture class="hero-banner" data-astro-cid-anhloy43="">
             <img
-                src="/assets/FrontPageBG.png"
+                src={heroBanner.src}
                 alt="Technology Banner"
                 loading="lazy"
                 width="750"
@@ -22,7 +26,7 @@ const siteName = "Tanner Tucci";
     </header>
     <picture class="hero-logo" data-astro-cid-anhloy43="">
         <img
-            src="/assets/TTucci pfp.jpg"
+            src={profileImage.src}
             alt="Tanner Tucci's Profile Picture"
             width="200"
             height="200"
@@ -238,8 +242,8 @@ const siteName = "Tanner Tucci";
         <li data-astro-cid-44zkpkd5="">
             <article class="card" data-astro-cid-oeghznkx="">
                 <img
-                    src="/assets/Stardust ico.png"
-                    alt="Descripción de la imagen 2"
+                    src={projectImage.src}
+                    alt="Stardust Photography preview"
                     loading="lazy"
                     width="201"
                     height="103"
@@ -307,7 +311,7 @@ const siteName = "Tanner Tucci";
         <div class="about-profile" data-astro-cid-zsov6f23="">
             <picture data-astro-cid-zsov6f23="">
                 <img
-                    src="/assets/TTucciGradMain.jpg"
+                    src={aboutImage.src}
                     alt="Tanner Tucci's Profile Picture"
                     loading="lazy"
                     width="200"
