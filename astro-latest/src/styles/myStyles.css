@@ -295,6 +295,11 @@ footer {
       text-align:center
     }
   }
+  .hero-buttons {
+    Display: flex;
+    flex-direction: row;
+    gap: 1rem;
+  }
   button {
     width:fit-content;
     padding:10px 20px;
