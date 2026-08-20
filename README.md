@@ -16,7 +16,7 @@ Also hooks into my alternative site folio and various social medias
 
 ## Project Structure
 
-``
+```
 /astro-latest
   /.vscode
   /public
