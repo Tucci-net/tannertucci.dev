@@ -296,9 +296,9 @@ footer {
     }
   }
   .hero-buttons {
-    Display: flex;
-    flex-direction: row;
-    gap: 1rem;
+    display:flex;
+    flex-direction:row;
+    gap:1rem;
   }
   button {
     width:fit-content;
@@ -350,15 +350,77 @@ footer {
   .card-list {
     display:grid;
     grid-template-columns:repeat(auto-fit,minmax(228px,1fr));
+    align-items:stretch;
     gap:2rem;
     list-style:none;
     margin:0;
     padding:0;
     li {
+      display:flex;
       &:hover {
         transform:translateY(-5px)
       }
     }
+    .card {
+      height:100%;
+    }
+  }
+}
+#hero[data-astro-cid-anhloy43] {
+  order:1;
+}
+#skills[data-astro-cid-sye7xtqh] {
+  order:2;
+}
+#projects[data-astro-cid-44zkpkd5] {
+  order:3;
+}
+#experience[data-astro-cid-ghubstuj] {
+  order:4;
+}
+#about[data-astro-cid-zsov6f23] {
+  order:5;
+}
+.hero-social-media {
+  a {
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    padding:0;
+    background:transparent;
+    color:var(--primary-color);
+    border-radius:0;
+    box-shadow:none;
+    &:hover {
+      background:transparent;
+      color:var(--text-color);
+      border:none;
+      text-decoration:none;
+    }
+  }
+}
+.scroll-indicator {
+  position:fixed;
+  z-index:10;
+  left:50%;
+  top:50%;
+  display:grid;
+  place-items:center;
+  width:3rem;
+  height:3rem;
+  padding:0;
+  border:0;
+  border-radius:50%;
+  background:var(--primary-color);
+  color:#fff;
+  opacity:0;
+  pointer-events:none;
+  transform:translate(-50%,calc(-50% + 1rem));
+  transition:opacity .3s ease,transform .3s ease;
+  &.is-visible {
+    opacity:1;
+    pointer-events:auto;
+    transform:translate(-50%,-50%);
   }
 }
 #hero[data-astro-cid-anhloy43] {
@@ -479,7 +541,6 @@ p[data-astro-cid-wjbk2oyg] {
         overflow:hidden;
         max-width:250px;
         height:auto;
-        border:2px solid var(--primary-color);
         border-radius:30px
       }
       a {
@@ -488,12 +549,6 @@ p[data-astro-cid-wjbk2oyg] {
         position:relative;
         &:hover {
           color:var(--primary-color)
-        }
-        &:hover span[data-astro-cid-zsov6f23].sr-only {
-          padding:0 5px;
-          background:var(--secundary-color);
-          text-decoration:underline;
-          opacity:1
         }
       }
     }
@@ -504,11 +559,16 @@ p[data-astro-cid-wjbk2oyg] {
     }
   }
 }
-span[data-astro-cid-zsov6f23].sr-only {
+.sr-only {
   position:absolute;
-  right:-20px;
-  bottom:-16px;
-  opacity:0
+  width:1px;
+  height:1px;
+  padding:0;
+  margin:-1px;
+  overflow:hidden;
+  clip:rect(0,0,0,0);
+  white-space:nowrap;
+  border:0
 }
 .social-media[data-astro-cid-zsov6f23] {
   display:flex;
