@@ -71,11 +71,6 @@ const siteName = "Tanner Tucci";
         </div>
     </div>
 </section>
-<button class="scroll-indicator" type="button" aria-label="Scroll to skills">
-    <svg width="32" height="32" viewBox="0 0 24 24" aria-hidden="true">
-        <path fill="currentColor" d="m12 16.5-7-7 1.4-1.4 5.6 5.575L17.6 8.1 19 9.5z"></path>
-    </svg>
-</button>
 <section id="skills" data-astro-cid-sye7xtqh="">
     <h2 data-astro-cid-sye7xtqh="">Skills</h2>
     <div class="carousel-container" data-astro-cid-sye7xtqh="">
@@ -432,27 +427,4 @@ const siteName = "Tanner Tucci";
 </section>
   </main>
 </BaseLayout>
-
-<script>
-    const scrollIndicator = document.querySelector<HTMLButtonElement>(".scroll-indicator");
-    let inactivityTimer: ReturnType<typeof setTimeout>;
-
-    const showScrollIndicator = () => {
-        scrollIndicator?.classList.add("is-visible");
-    };
-
-    const resetInactivityTimer = () => {
-        scrollIndicator?.classList.remove("is-visible");
-        clearTimeout(inactivityTimer);
-        inactivityTimer = setTimeout(showScrollIndicator, 2000);
-    };
-
-    document.addEventListener("pointermove", resetInactivityTimer);
-    document.addEventListener("pointerdown", resetInactivityTimer);
-    scrollIndicator?.addEventListener("click", () => {
-        document.querySelector("#skills")?.scrollIntoView({ behavior: "smooth" });
-        scrollIndicator.classList.remove("is-visible");
-    });
-    resetInactivityTimer();
-</script>
 
